@@ -1,0 +1,32 @@
+@page "/componenteDemo"
+<div class="wrapper">
+    <h1>componente recientemente creado</h1>
+</div>
+
+<p>Valor que recibi desde otro componente</p>
+
+@if(ValorRecibido != ""){
+    <p>@ValorRecibido</p>
+
+    @foreach(string nombre in nombres){
+        <p>@nombre</p>
+    }
+
+
+}else{
+    <p>por favor ingresa texto</p>
+}
+
+@code {
+
+    [Parameter]
+    public string? ValorRecibido {get;set;}
+
+    public string[] nombres = new string[]{
+        "juampi",
+        "dumbo",
+        "kira"
+    };
+
+
+}

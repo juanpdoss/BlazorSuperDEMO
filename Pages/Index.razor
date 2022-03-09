@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Aprendiendo Blazor the bad way</h1>
+
+<input type="text" @bind="@PasaMano" @bind:event="oninput">
+
+<ComponenteNuevo ValorRecibido="@PasaMano"/>
+
+
+@code{
+    public string PasaMano {get;set;} = "";
+
+    
+
+}
